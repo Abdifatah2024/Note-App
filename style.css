@@ -1,0 +1,40 @@
+/* Style for the container of each todo item */
+.todo-item {
+    /* display: flex; */
+    /* align-items: center; */
+    margin-bottom: 15px; /* Adds a gap between each note */
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #e40a0a;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+ 
+}
+
+/* Common button styles */
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    flex-shrink: 0; /* Prevents button from shrinking */
+}
+
+/* Different background for the Delete button */
+button:nth-child(3) {
+    background-color: #f44336; /* Red background for delete */
+    color: white;
+}
+
+
+/* Hover effect for buttons */
+button:hover {
+
+    background-color: #45a049; /* Green background on hover */
+    color: white;
+    opacity: 0.8;
+}
