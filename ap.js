@@ -38,6 +38,7 @@ const editNote = (todoItem, noteText) => {
     }
 }
 
+
 const deleteNote = (todoItem) => {
     // Confirm if the user really wants to delete the note
     const confirmation = confirm("Are you sure you want to delete this note?");
@@ -79,3 +80,28 @@ themeToggle.addEventListener('click', () => {
 });
 
 savebtn.addEventListener('click', savenote);
+const exportBtn = document.querySelector('.export-btn');
+
+exportBtn.addEventListener('click', () => {
+    const todoItems = document.querySelectorAll('.todo-item span');
+    let notesText = '';
+
+    todoItems.forEach((item) => {
+        notesText += `${item.textContent}\n`; // Append each note to the text
+    });
+
+    // Create a blob with the notes text
+    const blob = new Blob([notesText], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+
+    // Create a link to download the file
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'notes.txt';
+    document.body.appendChild(a);
+    a.click();
+
+    // Clean up
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+});
