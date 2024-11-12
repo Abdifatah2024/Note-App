@@ -24,7 +24,13 @@ body {
     background-color: #1e1e1e; /* Dark mode item background */
     color: white; /* Dark mode item text color */
 }
+label{
+    background-color: blue;
+    color: white;
+    padding:5px;
+    border-radius: 5px;
 
+}
 /* Style for the container of each todo item */
 .todo-item {
     /* display: flex; */
