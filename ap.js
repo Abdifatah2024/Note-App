@@ -45,5 +45,37 @@ const deleteNote = (todoItem) => {
         todoItem.remove(); // Remove the todo item from the DOM if confirmed
     }
 }
+const searchInput = document.querySelector('.search-input');
+
+searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.trim().toLowerCase();
+    const todoItems = document.querySelectorAll('.todo-item');
+
+    todoItems.forEach(item => {
+        const noteText = item.querySelector('span').textContent.toLowerCase();
+        if (noteText.includes(searchTerm)) {
+            item.style.display = 'block'; // Show note if it matches the search term
+        } else {
+            item.style.display = 'none'; // Hide note if it doesn't match
+        }
+    });
+});
+const themeToggle = document.querySelector('.theme-toggle');
+
+// Check for saved theme in localStorage
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+document.body.classList.toggle('dark-mode', currentTheme === 'dark');
+
+themeToggle.addEventListener('click', () => {
+    // Toggle theme
+    document.body.classList.toggle('dark-mode');
+    
+    // Save preference in localStorage
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
 
 savebtn.addEventListener('click', savenote);

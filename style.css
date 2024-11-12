@@ -1,3 +1,30 @@
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.todo-item {
+    background-color: #f9f9f9; /* Light mode item background */
+    color: black; /* Light mode item text color */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dark-mode .todo-item {
+    background-color: #1e1e1e; /* Dark mode item background */
+    color: white; /* Dark mode item text color */
+}
+
 /* Style for the container of each todo item */
 .todo-item {
     /* display: flex; */
