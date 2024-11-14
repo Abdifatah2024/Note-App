@@ -1,4 +1,4 @@
-body {
+/* body {
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -96,4 +96,114 @@ button:hover {
             grid-template-columns: repeat(1,1fr);
             width: 100%;
         }
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.todo-item:hover {
+    background-color: #f0f0f0;
+}
+
+.todo-item span {
+    flex: 1;
+    font-size: 16px;
+}
+
+.todo-item button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.todo-item button:hover {
+    background-color: #ddd;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .todo-item {
+    background-color: #444;
+    border-color: #555;
+}
+
+.dark-mode .todo-item:hover {
+    background-color: #555;
+}
+
+.input, .search-input, .savebtn, .export-btn, .theme-toggle {
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px;
+}
+.sort-buttons button {
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sort-buttons button:hover {
+    background-color: #ddd;
+}
+.update-confirmation {
+    position: fixed;
+    top: 50px; /* Adjust as needed to avoid overlap with other notifications */
+    right: 10px;
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px 15px;
+    border: 1px solid #d6e9c6;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    font-weight: bold;
+    z-index: 1000;
+}
+.delete-confirmation {
+    position: fixed;
+    top: 50px; /* Adjust as needed to avoid overlap with other notifications */
+    right: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.confirmation {
+    position: fixed;
+    top: 50px; /* Adjust as needed to avoid overlap with other notifications */
+    right: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    font-weight: bold;
+    z-index: 1000;
 }
