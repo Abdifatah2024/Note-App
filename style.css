@@ -207,3 +207,10 @@ body {
     font-weight: bold;
     z-index: 1000;
 }
+.theme-toggle button{
+    background-color: transparent;
+    border: 1px solid  black;
+}
+
+
+  
