@@ -213,4 +213,46 @@ body {
 }
 
 
-  
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+.footer {
+    background-color: #333;
+    color: yellow;
+    text-align: center;
+    font-weight: bolder;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}
