@@ -212,12 +212,15 @@ body {
     border: 1px solid  black;
 }
 
-
 .header {
     background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
+    position: sticky; /* Sticky positioning */
+    top: 0; /* Sticks to the top */
+    z-index: 1000; /* Highest stacking context */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
 .header h1 {
